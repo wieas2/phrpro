@@ -1,0 +1,265 @@
+ body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        section {
+        
+             /* ارتفاع إضافي لتسهيل التمرير */
+        }
+        nav {
+            margin-bottom: 20px;
+        }
+        .colored-line {
+            width: 100%; /* عرض الخط 100% */
+            height: 0.25cm; /* ارتفاع الخط 0.25 سم */
+            background: linear-gradient(to right, green 25%, blue 25%, blue 75%, green 75%);
+        }
+        .menu {
+            display: flex;
+            justify-content: center; /* توسيط القوائم */
+            flex-wrap: wrap; /* السماح بالتفاف القوائم */
+        }
+        .menu a {
+            background-color: #805817; /* لون بني فاتح */
+            color: white; /* لون النص */
+            padding: 4px 25px; /* مسافة داخلية أقل */
+            margin: 3px; /* مسافة خارجية بين الأزرار */
+            text-decoration: none; /* إزالة الخط السفلي */
+            border-radius: 2px; /* زوايا مدورة */
+           
+            transition: background-color 0.3s; /* تأثير التحويل */
+        }
+        .menu a:hover {
+            background-color: green; /* لون أفتح عند التحويم */
+        }
+        .blue-text {
+            display: flex; /* استخدام flexbox لترتيب النصوص في صف */
+            justify-content: center; /* توسيط النصوص */
+            color: green; /* لون النص الأزرق */
+        }
+        .blue-text a {
+            margin: 6px; /* مسافة بين النصوص */
+            text-decoration: none; /* إزالة الخط السفلي */
+            color: green; /* لون النص */
+            font-size: 18px; /* حجم الخط أكبر */
+            padding: 2px; /* نقل المسافة الداخلية */
+            font-weight: bold; /* جعل الخط عريض */
+            transition: background-color 0.3s; /* تأثير التحويل */
+        }
+        .blue-text a:hover {
+            background-color: #805817; /* تغيير اللون إلى الأخضر عند التحويم */
+            color: white; /* لون النص */
+        }
+        /* قواعد للتجاوب */
+        @media (max-width: 768px) {
+            .menu a, .blue-text a {
+                font-size: 16px; /* حجم الخط أصغر للأجهزة الصغيرة */
+                padding: 6px 10px; /* تقليل المسافة الداخلية */
+            }
+        }
+        @media (max-width: 480px) {
+            .menu a, .blue-text a {
+                font-size: 14px; /* حجم الخط أصغر للمحمول */
+                padding: 5px 8px; /* تقليل المسافة الداخلية أكثر */
+            }
+        }
+        /* سلايدر الصور */
+        .slider {
+            position: relative;
+            width: 100%; /* عرض السلايدر */
+            margin: auto; /* توسيط السلايدر */
+            overflow: hidden; /* إخفاء المحتوى الزائد */
+        }
+        .slides {
+            display: flex; /* استخدام flexbox لترتيب الصور */
+            transition: transform 0.5s ease; /* تأثير الانتقال */
+        }
+        .slide {
+            min-width: 100%; /* كل صورة تأخذ عرض السلايدر */
+            box-sizing: border-box; /* احتساب المسافات الداخلية */
+        }
+        .slide img {
+            width: 100%; /* عرض الصورة 100% */
+            height: 300px; /* الحفاظ على نسبة العرض إلى الارتفاع */
+        }
+        .prev, .next {
+            cursor: pointer; /* تغيير المؤشر عند التحويم */
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.8); /* خلفية بيضاء شفافة */
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .prev {
+            left: 10px; /* موقع الزر السابق */
+        }
+        .next {
+            right: 10px; /* موقع الزر التالي */
+        }
+        /* قسم المعلومات */
+        .info-section {
+            text-align: center; /* توسيط النصوص */
+            margin: 40px 0; /* هوامش فوق وتحت */
+        }
+        .info-section {
+            text-align: center; /* توسيط النصوص */
+            margin: 40px 0; /* هوامش فوق وتحت */
+        }
+        .info-section3 {
+            text-align: center; /* توسيط النصوص */
+            margin: 40px 0; /* هوامش فوق وتحت */
+            background-color: #f5deb3; /* لون بني فاتح */
+        }
+        .info-section2 {
+            text-align: center; /* توسيط النصوص */
+          
+        }
+        .info-section img {
+            max-width: 100%; /* عرض الصورة 100% داخل القسم */
+            height: auto; /* الحفاظ على نسبة العرض إلى الارتفاع */
+            margin: 20px 0; /* هوامش حول الصورة */
+        }
+        .info-section2 img {
+            max-width: 100%; /* عرض الصورة 100% داخل القسم */
+            height: auto; /* الحفاظ على نسبة العرض إلى الارتفاع */
+            margin: 20px 0; /* هوامش حول الصورة */
+        }
+        .info-text {
+            max-width: 900px; /* تحديد عرض النص */
+            margin: auto; /* توسيط النص */
+            line-height: 1.6; /* زيادة تباعد الأسطر */
+            font-size: 22px; /* حجم الخط 18 */
+        }
+        .info-text3 {
+            background-color: #f5deb3; /* لون بني فاتح */
+            max-width: 900px; /* تحديد عرض النص */
+            margin: auto; /* توسيط النص */
+            line-height: 1.6; /* زيادة تباعد الأسطر */
+            font-size: 22px; /* حجم الخط 18 */
+        }
+.info-text1 {
+            max-width: 900px; /* تحديد عرض النص */
+            text-align:right;
+            line-height: 1.6; /* زيادة تباعد الأسطر */
+            font-size: 22px; /* حجم الخط 18 */
+        }
+.info-text2 {
+            max-width: 900px; /* تحديد عرض النص */
+            text-align:left;
+            line-height: 1.6; /* زيادة تباعد الأسطر */
+            font-size: 22px; /* حجم الخط 18 */
+        }
+        /* القسم الجديد */
+        .additional-section {
+            background-color: #f5deb3; /* لون بني فاتح */
+            padding: 20px; /* مسافة داخلية */
+            display: flex; /* استخدام flexbox */
+            justify-content: center; /* توسيط المحتوى */
+            
+        }
+.additional-section1 {
+            background-color: #3090c7; /* لون  فاتح */
+            padding-left: 5px; /* مسافة داخلية */
+           
+          
+            
+            color:white;
+            font-size: 11px;
+           
+        }
+.ss a {
+           
+            justify-content: center; /* توسيط المحتوى */
+           
+            color:white;
+            font-size: 18px;
+            align-items:center; 
+        }
+        .additional{
+            background-color: #f5deb3; /* لون بني فاتح */
+            
+            justify-content: center; /* توسيط المحتوى */
+           
+        }
+        .additional-content {
+            text-align: center; /* توسيط النصوص */
+            margin: 0; /* مسافة جانبية */
+            justify-content: center; /* توسيط المحتوى */
+        }
+        .additional-content1 {
+            text-align: center; /* توسيط النصوص */
+            
+        }
+       
+        .vertical-line {
+            border-left: 2px solid #ccc; /* خط عمودي */
+            height: 200px; /* ارتفاع الخط */
+            margin: 0 20px; /* مسافة جانبية */
+        }
+        /* سلايدر الصور الصغيرة */
+        .slider-small {
+            position: relative;
+            width: 100%; /* عرض السلايدر */
+            margin: 20px auto; /* توسيط السلايدر */
+            overflow: hidden; /* إخفاء المحتوى الزائد */
+            text-align: center; /* توسيط النصوص داخل السلايدر */
+        }
+        .slides-small {
+            display: flex; /* استخدام flexbox لترتيب الصور */
+            transition: transform 0.5s ease; /* تأثير الانتقال */
+        }
+        .slide-small {
+            display: none; /* إخفاء الصور بشكل افتراضي */
+            text-align: center; /* توسيط النصوص */
+        }
+        .slide-small img {
+            width: 100%; /* عرض الصورة 100% */
+            height: auto; /* الحفاظ على نسبة العرض إلى الارتفاع */
+        }
+        .slider-small h3 {
+            margin: 10px 0;
+            font-size: 24px; /* حجم خط العنوان */
+            color: #333; /* لون العنوان */
+        }
+        .slider-small p {
+            font-size: 16px; /* حجم خط الوصف */
+            color: #666; /* لون الوصف */
+        }
+  .contact-form {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .contact-form button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: #45a049;
+        }
+ 
